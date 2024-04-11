@@ -1,0 +1,49 @@
+<!-- home.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Welcome to e-Learning Platform</h1>
+        <nav>
+            <ul>
+                <li><a href="/register">Register</a></li>
+                <li><a href="/login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <div class="container">
+        <h2>About Us</h2>
+        <p>Welcome to our e-Learning Platform! We are dedicated to providing high-quality online courses to help you achieve your learning goals. Our platform offers a wide range of courses in various subjects, taught by experienced instructors.
+        Whether you're a student looking to expand your knowledge, a professional seeking to enhance your skills, or an educator interested in innovative teaching methods, we have something for everyone.</p>
+    </div>
+    <div class="container">
+        <div class="mission">
+            <h2>Our Mission</h2>
+            <p>Our mission is to make learning accessible, engaging, and effective for all individuals, regardless of their background or location. We strive to provide a diverse range of high-quality courses taught by experts in their fields, empowering learners to achieve their personal and professional goals.</p>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="social-icons">
+            <h2>Stay Connected</h2>
+            <a href="https://github.com/madhukeshwarh"><i class="fab fa-github-square"></i></a>
+            <a href="https://www.linkedin.com/in/madhukeshwar-hegde-81ba931ba"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 e-Learning Platform. All rights reserved.</p>
+    </footer>
+</body>
+</html>

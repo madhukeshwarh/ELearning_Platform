@@ -1,0 +1,42 @@
+<!-- student_dashboard.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+<body>
+    <div class="header">
+        <h1>Student Dashboard</h1>
+        <button onclick="window.location.href='/logout'" class="logout-button">Logout</button>
+    </div>
+
+    <div class="container">
+        <h2>Available Courses</h2>
+        <ul class="course-list">
+            {% for course in courses %}
+            <li>
+                <img src="{{ url_for('static', filename='course_img.jpg') }}" alt="Course Image">
+                <div class="course-details">
+                    <h3>{{ course.course_name }}</h3>
+                    <p>Duration: {{ course.duration }}</p>
+                    <p>Price: {{ course.price }}</p>
+                    <a href="/payment?course_name={{ course.course_name }}&duration={{ course.duration }}&price={{ course.price }}"
+                    style="background-color: #007bff; color: #fff; padding: 5px 10px; text-decoration: none; border-radius: 5px;">Buy Course</a>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <script>
+        function buyCourse(courseName) {
+            // Redirect to the payment page with the course name as a parameter
+            window.location.href = '/payment?course=' + encodeURIComponent(courseName);
+        }
+    </script>
+</body>
+</html>

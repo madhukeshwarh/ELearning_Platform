@@ -1,0 +1,140 @@
+/* dashboard.css */
+
+/* Styles for the header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Align items at the start and end */
+    align-items: center; /* Align items vertically */
+    background-color:black;
+    color: #fff;
+    padding: 15px;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.logout-button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background-color: #c82333;
+}
+
+/* Styles for the container */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Styles for the Add Course button */
+.add-course-button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-course-button:hover {
+    background-color: #218838;
+}
+
+/* Styles for the Add Course form */
+.add-course-form {
+    margin-top: 20px;
+}
+
+.add-course-form label {
+    margin-top: 10px;
+    display: block;
+}
+
+.add-course-form input {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.add-course-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-course-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Styles for the course list */
+.course-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.course-list li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.course-list img {
+    width: 200px; /* Adjust image size as needed */
+    margin-right: 20px;
+    height: 200px;
+}
+
+.course-list h3 {
+    margin: 0;
+    color: #333;
+    font-size: 18px;
+}
+
+.course-list p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 14px;
+}
+.course-details {
+    flex-grow: 1; /* Allow course details to take remaining space */
+}
+
+.course-details h3 {
+    margin: 0;
+    color: #333;
+    font-size: 18px;
+}
+
+.course-details p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 14px;
+}
+li button{
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Payment</h1>
+        <h2>Course Details:</h2>
+        <p><strong>Course Name:</strong> {{ course_name }}</p>
+        <p><strong>Duration:</strong> {{ duration }}</p>
+        <p><strong>Price:</strong> ₹{{ price }}</p>
+        
+        <!-- Payment form -->
+        <form action="/payment" method="post" id="payment-form">
+            <div class="form-row">
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" name="card-number" required>
+            </div>
+            <div class="form-row">
+                <label for="expiry-date">Expiration Date:</label>
+                <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required>
+            </div>
+            <div class="form-row">
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" required>
+            </div>
+            <button type="submit" onclick="window.location.href='/buy_course'">Pay Now</button>
+        </form>
+    </div>
+</body>
+</html>
